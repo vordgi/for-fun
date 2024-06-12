@@ -1,0 +1,83 @@
+<style>
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+  }
+  .vercel-loader {
+    width: 160px;
+    height: 160px;
+  }
+  .vercel {
+    animation: loading 3s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+  }
+  @keyframes loading {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+</style>
+<div style="display: grid; grid-auto-flow: column">
+  <div style="padding: 40px; display: flex; justify-content: center">
+    <svg viewBox="0 0 249 216" class="vercel-loader">
+      <defs>
+        <linearGradient id="grad1" x1="38%" x2="44%" y1="52%" y2="46%">
+          <stop offset="0%" stop-color="currentColor" />
+          <stop offset="100%" stop-color="transparent" />
+        </linearGradient>
+        <linearGradient id="grad2" x1="62%" x2="56%" y1="52%" y2="46%">
+          <stop offset="0%" stop-color="currentColor" />
+          <stop offset="100%" stop-color="transparent" />
+        </linearGradient>
+        <linearGradient id="grad3" x1="0" x2="0" y1="0%" y2="86%">
+          <stop offset="0%" stop-color="currentColor" />
+          <stop offset="100%" stop-color="transparent" />
+        </linearGradient>
+      </defs>
+      <g class="vercel" style="color: red">
+        <path d="M212 184H37L0 216H249L212 184Z" fill="url(#grad3)" />
+        <path d="M37 184L124.5 32V0L0 216L37 184Z" fill="url(#grad2)" />
+        <path d="M212 184L124.5 32V0L249 216L212 184Z" fill="url(#grad1)" />
+      </g>
+    </svg>
+  </div>
+  <div
+    style="
+      background-color: #27292b;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    "
+  >
+    <svg viewBox="0 0 249 216" class="vercel-loader">
+      <defs>
+        <linearGradient id="grad-light1" x1="38%" x2="44%" y1="52%" y2="46%">
+          <stop offset="0%" stop-color="#f3f3f3" />
+          <stop offset="100%" stop-color="transparent" />
+        </linearGradient>
+        <linearGradient id="grad-light2" x1="62%" x2="56%" y1="52%" y2="46%">
+          <stop offset="0%" stop-color="#f3f3f3" />
+          <stop offset="100%" stop-color="transparent" />
+        </linearGradient>
+        <linearGradient id="grad-light3" x1="0" x2="0" y1="0%" y2="86%">
+          <stop offset="0%" stop-color="#f3f3f3" />
+          <stop offset="100%" stop-color="transparent" />
+        </linearGradient>
+      </defs>
+      <g class="vercel">
+        <path d="M212 184H37L0 216H249L212 184Z" fill="url(#grad-light3)" />
+        <path d="M37 184L124.5 32V0L0 216L37 184Z" fill="url(#grad-light2)" />
+        <path
+          d="M212 184L124.5 32V0L249 216L212 184Z"
+          fill="url(#grad-light1)"
+        />
+      </g>
+    </svg>
+  </div>
+</div>
