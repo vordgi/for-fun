@@ -3,15 +3,26 @@
   body {
     padding: 0;
     margin: 0;
+    background-color: #27292b;
   }
-  .vercel-loader {
-    width: 160px;
-    height: 160px;
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
-  .vercel {
-    animation: loading 3s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+  .block {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
   }
-  @keyframes loading {
+  .loader {
+    width: 320px;
+    height: 320px;
+    color: #fff;
+  }
+  .loader1 {
+    animation: pulse 3s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+  }
+  @keyframes pulse {
     0% {
       opacity: 0;
     }
@@ -22,60 +33,297 @@
       opacity: 0;
     }
   }
+  .loader2 {
+    animation: pulse 4s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+  }
+  #loader2-grad4 {
+    animation: rotate 5s linear infinite;
+  }
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  #loader3-grad4 {
+    animation: rotate 5s linear infinite;
+  }
+  .loader4 {
+    animation: colorize 5s linear infinite;
+  }
+  @keyframes colorize {
+    0% {
+      color: #ffffff;
+    }
+    20% {
+      color: #93c5fd;
+    }
+    50% {
+      color: #fb7185;
+    }
+    80% {
+      color: #fb923c;
+    }
+    100% {
+      color: #fff;
+    }
+  }
+  .loader5-circle {
+    animation: move-circle 3s linear infinite;
+    opacity: 0.7;
+  }
+  @keyframes move-circle {
+    0% {
+      transform: translate(35px, -35px);
+    }
+    35% {
+      transform: translate(125px, -190px);
+    }
+    70% {
+      transform: translate(210px, -35px);
+    }
+    100% {
+      transform: translate(35px, -35px);
+    }
+  }
+  .loader6-circle {
+    animation: move-circle-steps 3s linear infinite;
+    opacity: 0.7;
+  }
+  @keyframes move-circle-steps {
+    0% {
+      transform: translate(35px, -35px);
+    }
+    25% {
+      transform: translate(125px, -190px);
+    }
+    35% {
+      transform: translate(125px, -190px);
+    }
+    60% {
+      transform: translate(210px, -35px);
+    }
+    70% {
+      transform: translate(210px, -35px);
+    }
+    90% {
+      transform: translate(35px, -35px);
+    }
+    100% {
+      transform: translate(35px, -35px);
+    }
+  }
 </style>
-<div style="display: grid; grid-auto-flow: column">
-  <div style="padding: 40px; display: flex; justify-content: center">
-    <svg viewBox="0 0 249 216" class="vercel-loader">
+<div class="container">
+  <div class="block">
+    <svg viewBox="0 0 249 216" class="loader loader1">
       <defs>
-        <linearGradient id="grad1" x1="38%" x2="44%" y1="52%" y2="46%">
+        <linearGradient id="loader1-grad1" x1="38%" x2="44%" y1="52%" y2="46%">
           <stop offset="0%" stop-color="currentColor" />
           <stop offset="100%" stop-color="transparent" />
         </linearGradient>
-        <linearGradient id="grad2" x1="62%" x2="56%" y1="52%" y2="46%">
+        <linearGradient id="loader1-grad2" x1="62%" x2="56%" y1="52%" y2="46%">
           <stop offset="0%" stop-color="currentColor" />
           <stop offset="100%" stop-color="transparent" />
         </linearGradient>
-        <linearGradient id="grad3" x1="0" x2="0" y1="0%" y2="86%">
+        <linearGradient id="loader1-grad3" x1="0" x2="0" y1="0%" y2="86%">
           <stop offset="0%" stop-color="currentColor" />
           <stop offset="100%" stop-color="transparent" />
         </linearGradient>
       </defs>
-      <g class="vercel" style="color: red">
-        <path d="M212 184H37L0 216H249L212 184Z" fill="url(#grad3)" />
-        <path d="M37 184L124.5 32V0L0 216L37 184Z" fill="url(#grad2)" />
-        <path d="M212 184L124.5 32V0L249 216L212 184Z" fill="url(#grad1)" />
+      <g>
+        <path d="M212 184H37L0 216H249L212 184Z" fill="url(#loader1-grad3)" />
+        <path d="M37 184L124.5 32V0L0 216L37 184Z" fill="url(#loader1-grad2)" />
+        <path
+          d="M212 184L124.5 32V0L249 216L212 184Z"
+          fill="url(#loader1-grad1)"
+        />
       </g>
     </svg>
   </div>
-  <div
-    style="
-      background-color: #27292b;
-      padding: 40px;
-      display: flex;
-      justify-content: center;
-    "
-  >
-    <svg viewBox="0 0 249 216" class="vercel-loader">
+  <div class="block">
+    <svg viewBox="0 0 249 216" class="loader loader2">
       <defs>
-        <linearGradient id="grad-light1" x1="38%" x2="44%" y1="52%" y2="46%">
-          <stop offset="0%" stop-color="#f3f3f3" />
+        <linearGradient id="loader2-grad1" x1="38%" x2="44%" y1="52%" y2="46%">
+          <stop offset="0%" stop-color="currentColor" />
           <stop offset="100%" stop-color="transparent" />
         </linearGradient>
-        <linearGradient id="grad-light2" x1="62%" x2="56%" y1="52%" y2="46%">
-          <stop offset="0%" stop-color="#f3f3f3" />
+        <linearGradient id="loader2-grad2" x1="62%" x2="56%" y1="52%" y2="46%">
+          <stop offset="0%" stop-color="currentColor" />
           <stop offset="100%" stop-color="transparent" />
         </linearGradient>
-        <linearGradient id="grad-light3" x1="0" x2="0" y1="0%" y2="86%">
-          <stop offset="0%" stop-color="#f3f3f3" />
+        <linearGradient id="loader2-grad3" x1="0" x2="0" y1="0%" y2="86%">
+          <stop offset="0%" stop-color="currentColor" />
+          <stop offset="100%" stop-color="transparent" />
+        </linearGradient>
+        <linearGradient
+          id="loader2-grad4"
+          x1="0"
+          x2="0"
+          y1="0%"
+          y2="100%"
+          class="loader2-circle"
+        >
+          <stop offset="0%" stop-color="#000000" />
+          <stop offset="100%" stop-color="currentColor" />
+        </linearGradient>
+      </defs>
+      <mask id="loader2-mask">
+        <path d="M212 184H37L0 216H249L212 184Z" fill="url(#loader2-grad3)" />
+        <path d="M37 184L124.5 32V0L0 216L37 184Z" fill="url(#loader2-grad2)" />
+        <path
+          d="M212 184L124.5 32V0L249 216L212 184Z"
+          fill="url(#loader2-grad1)"
+        />
+      </mask>
+      <circle
+        cx="50%"
+        cy="50%"
+        r="100%"
+        mask="url(#loader2-mask)"
+        fill="url(#loader2-grad4)"
+      />
+    </svg>
+  </div>
+  <div class="block">
+    <svg viewBox="0 0 249 216" class="loader loader3">
+      <defs>
+        <linearGradient id="loader3-grad1" x1="38%" x2="44%" y1="52%" y2="46%">
+          <stop offset="0%" stop-color="currentColor" />
+          <stop offset="100%" stop-color="transparent" />
+        </linearGradient>
+        <linearGradient id="loader3-grad2" x1="62%" x2="56%" y1="52%" y2="46%">
+          <stop offset="0%" stop-color="currentColor" />
+          <stop offset="100%" stop-color="transparent" />
+        </linearGradient>
+        <linearGradient id="loader3-grad3" x1="0" x2="0" y1="0%" y2="86%">
+          <stop offset="0%" stop-color="currentColor" />
+          <stop offset="100%" stop-color="transparent" />
+        </linearGradient>
+        <linearGradient id="loader3-grad4" x1="0" x2="0" y1="0%" y2="100%">
+          <stop offset="0%" stop-color="transparent" />
+          <stop offset="100%" stop-color="#fff" />
+        </linearGradient>
+      </defs>
+      <mask id="loader3-mask">
+        <path d="M212 184H37L0 216H249L212 184Z" fill="url(#loader3-grad3)" />
+        <path d="M37 184L124.5 32V0L0 216L37 184Z" fill="url(#loader3-grad2)" />
+        <path
+          d="M212 184L124.5 32V0L249 216L212 184Z"
+          fill="url(#loader3-grad1)"
+        />
+      </mask>
+      <circle
+        cx="50%"
+        cy="50%"
+        r="100%"
+        mask="url(#loader3-mask)"
+        fill="url(#loader3-grad4)"
+      />
+    </svg>
+  </div>
+  <div class="block">
+    <svg viewBox="0 0 249 216" class="loader loader4">
+      <defs>
+        <linearGradient id="loader4-grad1" x1="38%" x2="44%" y1="52%" y2="46%">
+          <stop offset="0%" stop-color="currentColor" />
+          <stop offset="100%" stop-color="transparent" />
+        </linearGradient>
+        <linearGradient id="loader4-grad2" x1="62%" x2="56%" y1="52%" y2="46%">
+          <stop offset="0%" stop-color="currentColor" />
+          <stop offset="100%" stop-color="transparent" />
+        </linearGradient>
+        <linearGradient id="loader4-grad3" x1="0" x2="0" y1="0%" y2="86%">
+          <stop offset="0%" stop-color="currentColor" />
           <stop offset="100%" stop-color="transparent" />
         </linearGradient>
       </defs>
-      <g class="vercel">
-        <path d="M212 184H37L0 216H249L212 184Z" fill="url(#grad-light3)" />
-        <path d="M37 184L124.5 32V0L0 216L37 184Z" fill="url(#grad-light2)" />
+      <path d="M212 184H37L0 216H249L212 184Z" fill="url(#loader4-grad3)" />
+      <path d="M37 184L124.5 32V0L0 216L37 184Z" fill="url(#loader4-grad2)" />
+      <path
+        d="M212 184L124.5 32V0L249 216L212 184Z"
+        fill="url(#loader4-grad1)"
+      />
+    </svg>
+  </div>
+  <div class="block">
+    <svg viewBox="0 0 249 216" class="loader loader5">
+      <defs>
+        <linearGradient id="loader5-grad1" x1="38%" x2="44%" y1="52%" y2="46%">
+          <stop offset="0%" stop-color="currentColor" />
+          <stop offset="100%" stop-color="transparent" />
+        </linearGradient>
+        <linearGradient id="loader5-grad2" x1="62%" x2="56%" y1="52%" y2="46%">
+          <stop offset="0%" stop-color="currentColor" />
+          <stop offset="100%" stop-color="transparent" />
+        </linearGradient>
+        <linearGradient id="loader5-grad3" x1="0" x2="0" y1="0%" y2="86%">
+          <stop offset="0%" stop-color="currentColor" />
+          <stop offset="100%" stop-color="transparent" />
+        </linearGradient>
+        <radialGradient id="loader5-grad4">
+          <stop offset="10%" stop-color="#fff" />
+          <stop offset="95%" stop-color="transparent" />
+        </radialGradient>
+      </defs>
+      <mask id="loader5-mask">
+        <circle
+          cx="0"
+          cy="100%"
+          r="40"
+          fill="url('#loader5-grad4')"
+          style="transform: translate(35px, -35px)"
+          class="loader5-circle"
+        />
+      </mask>
+      <g mask="url(#loader5-mask)">
+        <path d="M212 184H37L0 216H249L212 184Z" fill="url(#loader5-grad3)" />
+        <path d="M37 184L124.5 32V0L0 216L37 184Z" fill="url(#loader5-grad2)" />
         <path
           d="M212 184L124.5 32V0L249 216L212 184Z"
-          fill="url(#grad-light1)"
+          fill="url(#loader5-grad1)"
+        />
+      </g>
+    </svg>
+  </div>
+  <div class="block">
+    <svg viewBox="0 0 249 216" class="loader loader6">
+      <defs>
+        <linearGradient id="loader6-grad1" x1="38%" x2="44%" y1="52%" y2="46%">
+          <stop offset="0%" stop-color="currentColor" />
+          <stop offset="100%" stop-color="transparent" />
+        </linearGradient>
+        <linearGradient id="loader6-grad2" x1="62%" x2="56%" y1="52%" y2="46%">
+          <stop offset="0%" stop-color="currentColor" />
+          <stop offset="100%" stop-color="transparent" />
+        </linearGradient>
+        <linearGradient id="loader6-grad3" x1="0" x2="0" y1="0%" y2="86%">
+          <stop offset="0%" stop-color="currentColor" />
+          <stop offset="100%" stop-color="transparent" />
+        </linearGradient>
+        <radialGradient id="loader6-grad4">
+          <stop offset="10%" stop-color="#fff" />
+          <stop offset="95%" stop-color="transparent" />
+        </radialGradient>
+      </defs>
+      <mask id="loader6-mask">
+        <circle
+          cx="0"
+          cy="100%"
+          r="40"
+          fill="url('#loader6-grad4')"
+          style="transform: translate(35px, -35px)"
+          class="loader6-circle"
+        />
+      </mask>
+      <g mask="url(#loader6-mask)">
+        <path d="M212 184H37L0 216H249L212 184Z" fill="url(#loader6-grad3)" />
+        <path d="M37 184L124.5 32V0L0 216L37 184Z" fill="url(#loader6-grad2)" />
+        <path
+          d="M212 184L124.5 32V0L249 216L212 184Z"
+          fill="url(#loader6-grad1)"
         />
       </g>
     </svg>
